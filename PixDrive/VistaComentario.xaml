@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PixDrive.VistaComentario">
+  <ContentView.Content>
+      <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Fill">
+            <Frame HasShadow="True" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="txtIniciales" />
+                    <Label x:Name="txtComentario"/>
+                </StackLayout>
+            </Frame>
+      </StackLayout>
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PixDrive.InstructorVista">
+  <ContentView.Content>
+        <Frame HasShadow="True" Margin="5">
+            <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+               
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="usrpix.png" HeightRequest="80"/>
+                    <StackLayout>
+                        <Label Text="Nombre del instructor" />
+                        <Label Text="* * * * *" />
+                        <Label Text="Edad" />
+                    </StackLayout>
+  
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Aqui va la descripcion de cada usuario para que se vea con madres ..." />
+                   
+                </StackLayout>
+                <StackLayout x:Name="sl">
+                    
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+  </ContentView.Content>
+</ContentView>

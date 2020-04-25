@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PixDrive.MasterDetailPage1"
+             xmlns:pages="clr-namespace:PixDrive">
+  <MasterDetailPage.Master>
+        <ContentPage Title="ta">
+            <ContentPage.Content>
+                <StackLayout>
+
+                    <Frame BackgroundColor="#White" Padding="2,2,2,2">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Margin="20,10,0,10"
+                                       Text="pixdrive"
+                                       FontSize="25" 
+                                       TextColor="#1eaac1"/>
+
+                            </StackLayout>
+                            <BoxView HeightRequest="1" 
+                                         BackgroundColor="LightGray"/>
+                            <StackLayout>
+
+                                <Label  x:Name="txtnombre"
+                            FontSize="20"
+                            Margin="20,10,10,10"
+                            Text="Sergio Alexis Castañeda Trejo"
+                            TextColor="#000000"/>
+
+                                <Label  x:Name="txtesp"
+                            FontSize="15"
+                            Margin="20,0,10,10"
+                            Text="calle del llano 614 Monte  Real"
+                            TextColor="#1eaac1"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+                    <BoxView HeightRequest="1" Margin="5,0,5,0" BackgroundColor="#1eaac1"></BoxView>
+                    <ListView x:Name="listachida" ItemSelected="ListView_ItemSelected" Margin="0,10,0,0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid  Margin="5" >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.03*"></ColumnDefinition>
+                                                <ColumnDefinition Width="0.12*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <BoxView></BoxView>
+                                            <Image Source="{Binding imagen}">
+
+                                            </Image>
+                                            <Label Grid.Column="1"
+                                                   FontSize="17" 
+                                                   x:Name="nombresin" 
+                                                   Text="{Binding titulo}"  
+                                                   VerticalOptions="Center"
+                                                   TextColor="Black"/>
+
+
+                                        </Grid>
+
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Label Text="Created by Pixan."
+                           TextColor="#1eaac1"
+                           Margin="10,10,10,10"
+                           VerticalOptions="End" 
+                           HorizontalOptions="Center"/>
+
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+  
+</MasterDetailPage>
